@@ -1,6 +1,103 @@
-
-body {
+* {
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  font-size: 12px;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  width: 100%;
+  height: 1500px;
+  grid-template-rows: 170px 1126px 1fr;
+  grid-template-areas:
+  "header"
+  "content"
+  "footer";
+}
+
+header {
+  display: grid;
+  grid-area: header;
+  grid-template-rows: 64px 58px 43px;
+  grid-template-areas:
+  "first-layer"
+  "second-layer"
+  "third-layer";
+}
+
+.first-top-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: first-layer;
+}
+
+.logo {
+  height: 50px;
   margin: 10px;
+}
+
+.search-box {
+  height: 40px;
+  width: 60%;
+  margin-right: auto;
+}
+
+.primary-btn {
+  height: 30px;
+  width: 80px;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: #3079ed;
+  color: #fff;
+  background-color: #4d90fe;
+}
+
+.basic-spacing {
+  margin: 10px;
+}
+
+.second-top-layer {
+  grid: second-layer;
+}
+
+a {
+  font-size: 14px;
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(15, 15, 15);
+  font-weight: bold;
+}
+
+ul {
+  display: inline;
+}
+
+li {
+  display: inline;
+}
+
+li+li {
+  margin-left: 10px;
+}
+
+.primary-top-links {
+  margin-left: 170px;
+}
+
+.secondary-top-links {
+  margin-left: 90px;
+}
+.third-top-layer {
+  grid: third-layer;
+}
+main {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
 }
