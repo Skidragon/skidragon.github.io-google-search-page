@@ -27,7 +27,6 @@ header {
 
 .first-top-layer {
   display: flex;
-  justify-content: center;
   align-items: center;
   grid-area: first-layer;
 }
@@ -41,8 +40,12 @@ header {
   height: 40px;
   width: 60%;
   margin-right: auto;
+  background: url(media/google-mic.png);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left 99% center;
+  background-size: 20px 25px;
 }
-
 .primary-btn {
   height: 30px;
   width: 80px;
@@ -67,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+ul a:hover {
   color: rgb(15, 15, 15);
   font-weight: bold;
 }
@@ -84,20 +87,55 @@ li+li {
   margin-left: 10px;
 }
 
-.primary-top-links {
-  margin-left: 170px;
-}
 
+.main-links {
+  display: inline;
+}
 .secondary-top-links {
   margin-left: 90px;
 }
 .third-top-layer {
   grid: third-layer;
 }
+.result-status {
+  font-size: 10px;
+  color: grey;
+  align-self: start;
+}
 main {
   grid-area: content;
 }
 
+.search-results {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+}
+.search-item {
+  margin: 20px 0px;
+}
+.search-item:first-child {
+  margin-top: 0px;
+}
+.search-item > .search-result-link {
+  font-size: 20px;
+  color: blue;
+}
+.search-item > .search-result-link:hover {
+  text-decoration: underline;
+}
+.url-result {
+  padding: 5px 0px;
+  color: green;
+}
+.search-description {
+  font-size: 10;
+  color: #545454;
+}
+.primary-alignment {
+  margin-left: 170px;
+}
 footer {
   grid-area: footer;
 }
