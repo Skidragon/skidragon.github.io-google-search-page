@@ -63,11 +63,13 @@ header {
   grid: second-layer;
 }
 
-a {
+nav.main-links a {
   font-size: 14px;
   color: grey;
   text-decoration: none;
 }
+
+
 
 .primary-top-links a:hover,
 .secondary-top-links a:hover {
@@ -87,7 +89,10 @@ li+li {
   margin-left: 10px;
 }
 
-
+ul.primary-top-links > li:first-child {
+  padding: 0px 8px 15px 8px;
+  border-bottom: 4px solid blue;
+}
 .main-links {
   display: inline;
 }
@@ -118,9 +123,11 @@ main {
 .search-item:first-child {
   margin-top: 0px;
 }
+
 .search-item > .search-result-link {
   font-size: 20px;
   color: blue;
+  text-decoration: none;
 }
 .search-item > .search-result-link:hover {
   text-decoration: underline;
@@ -138,6 +145,7 @@ main {
 }
 .number-link {
   color: blue;
+  text-decoration: none;
 }
 ol > li {
   margin-left: 6.6px;
